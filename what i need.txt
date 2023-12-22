@@ -1,0 +1,50 @@
+op2=>operation: import pyflowchart
+sub3=>subroutine: call foo
+st5=>start: start choosefruit
+io7=>inputoutput: input: fruitname
+cond11=>condition: if (fruitname == 'apple')
+op15=>operation: a = 5
+op17=>operation: b = 5
+op19=>operation: c = (a + b)
+sub21=>subroutine: print(f'{c}')
+sub23=>subroutine: print(f'you have choosen Apple')
+e30=>end: end choosefruit
+st34=>start: start foo
+io36=>inputoutput: input: a, b
+cond40=>condition: if a
+sub44=>subroutine: print('a')
+op46=>operation: a = 'apple'
+sub67=>subroutine: choosefruit(b)
+io72=>inputoutput: output:  a
+e70=>end: end foo; function return
+cond51=>condition: for i in range(3)
+sub60=>subroutine: print('b')
+op62=>operation: b = 'banana'
+sub27=>subroutine: print(f'you have choosen {fruitname}')
+
+op2->sub3
+sub3->st34
+st34->io36
+io36->cond40
+cond40(yes)->sub44
+sub44->op46
+op46->sub67
+sub67->st5
+st5->io7
+io7->cond11
+cond11(yes)->op15
+op15->op17
+op17->op19
+op19->sub21
+sub21->sub23
+sub23->e30
+io72->e70
+cond40(no)->cond51
+cond51(yes)->sub60
+sub60->op62
+op62(left)->cond51
+cond51(no)->sub67
+cond11(no)->sub27
+sub27->e30
+e30->io72
+io72->e70
