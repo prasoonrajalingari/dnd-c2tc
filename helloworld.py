@@ -1,7 +1,7 @@
 import pyflowchart
 
 
-def choosefruit(fruitname):  #changes testing
+def choosefruit(fruitname):  #changes testing made changes directly on GIT
     if fruitname == 'apple':
         a= 5
         b= 5
