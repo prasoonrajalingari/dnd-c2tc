@@ -23,4 +23,5 @@ def foo(a, b):
     choosefruit(b)
     return a 
 
-foo(True,False)
+if __name__ == "__main__":
+    foo(True,False)
