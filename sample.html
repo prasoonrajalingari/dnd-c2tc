@@ -94,10 +94,6 @@
                     const OUTsvgBASE64 = btoa(currentDrawSVG)
                     doctitle = document.title.replace('.html','');
                     doctitle = doctitle.replace('.htm','');
-
-
-                    var currentCanvasDIV = document.getElementById('canvas')
-                    var currentDrawSVG = currentCanvasDIV.innerHTML.replaceAll('ë','e');
                     svgSource = currentDrawSVG
                     svgXML = currentDrawSVG;
                     // Use SVG Height and Width from the SVG XML to set canvas size
